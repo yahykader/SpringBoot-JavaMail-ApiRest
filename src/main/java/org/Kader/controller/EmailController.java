@@ -7,12 +7,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/send")
 public class EmailController {
 	
-	@RequestMapping(value="/send",method = RequestMethod.POST)
+	
+	
+	@RequestMapping(value="/sendMail",method = RequestMethod.POST)
 	public String sendEail(@RequestBody EmailMessage emailMessage) {
 		
 		return "Email send successufly ";
+		
+	}
+	
+	private void sendMail(EmailMessage emailMessage) {
 		
 	}
 
