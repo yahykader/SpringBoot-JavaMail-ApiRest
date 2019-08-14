@@ -4,8 +4,7 @@ public class EmailMessage {
 	
 	private String to_Address;
 	private String subject;
-	private String body;
-	
+	private String body; 
 	
 	public String getTo_Address() {
 		return to_Address;
