@@ -1,16 +1,35 @@
 package org.Kader.entities;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 public class EmailMessage {
 	
-	private String to_Address;
+	@NotNull
+	@Email
+	private String from;
+	@NotNull
+	@Email
+	private String to;
+	@NotNull
 	private String subject;
+	@NotNull
+	@Min(10)
 	private String body; 
 	
-	public String getTo_Address() {
-		return to_Address;
+	
+	public String getFrom() {
+		return from;
 	}
-	public void setTo_Address(String to_Address) {
-		this.to_Address = to_Address;
+	public void setFrom(String from) {
+		this.from = from;
+	}
+	public String getTo() {
+		return to;
+	}
+	public void setTo(String to) {
+		this.to = to;
 	}
 	public String getSubject() {
 		return subject;
